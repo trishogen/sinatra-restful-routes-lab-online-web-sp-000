@@ -2,12 +2,14 @@
   <html>
   <head></head>
   <body>
-    <h1><%= @article.title %></h1>
-    <%= @article.content %>
-    <form action="/articles/<%= @article.id %>" method="POST">
+    <h1><%= @recipe.name %></h1>
+    <%= @recipe.ingredients %>
+    <%= @recipe.cook_time %>
+    <form action="/recipes/<%= @recipe.id %>" method="POST">
       <input id="hidden" type="hidden" name="_method" value="PATCH">
-      Edit Title: <input type-"text" name="title">
-      Edit Content: <input type-"text" name="content">
+      Edit Name: <input type-"text" name="name">
+      Edit ingredients: <input type-"text" name="ingredients">
+      Edit Cook Time: <input type-"text" name="cook_time">
       <input type="submit">
     </form>
   </body>
